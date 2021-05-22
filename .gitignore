@@ -40,3 +40,7 @@ mvnw
 mvnw.cmd
 .mvn/
 target/
+
+
+# Ignore mysqlWorkbench model temporary files
+*.mwb.*
