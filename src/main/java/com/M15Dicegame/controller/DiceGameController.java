@@ -50,13 +50,16 @@ public class DiceGameController {
 		return ;
 	}
 	
+	*/
+	
+	
 	@GetMapping("/players/{id}/games")
 	public List<Game> getUserGames(@PathVariable(name="id") Long id) {
 		User user = userServiceImpl.findById(id);
 		return user.getGames();
 	}
 	
-		*/
+
 	
 	@GetMapping("/players/ranking")
 	public float getAverageGameWinningStatistic() {
