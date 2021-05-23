@@ -104,6 +104,33 @@
 			]
 		},
 		{
+			"name": "localhost:8181/players -  NEW USER ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Pepito\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "localhost:8181/players -  USERs LIST with MEANSCOREs",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
