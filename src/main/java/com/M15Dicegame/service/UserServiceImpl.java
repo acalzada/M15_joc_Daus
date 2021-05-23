@@ -26,6 +26,10 @@ public class UserServiceImpl {
 		return userDAO.save(user);
 	}
 	
+	public Game saveNewGame(Game game) {
+		return gameDAO.save(game);
+	}
+	
 	public List<User> getAllUsers() {
 		return userDAO.getAllUsersIdAndNameAndMeanScore();
 	}

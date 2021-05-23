@@ -40,18 +40,17 @@ public class DiceGameController {
 	}
 	
 	
-	/*
 	
 	@PostMapping("/players/{id}/games/")
-	public User throwDices(@PathVariable(name="id") Long id) {
+	public Game throwDices(@PathVariable(name="id") Long id) {
 		User user = userServiceImpl.findById(id);
-		user.play();
-		return;
+		Game game = user.play();
+		userServiceImpl.saveNewGame(game);
+		userServiceImpl.updateUser(user);
+		List<Game> gamesList = user.getGames(); 
+		return gamesList.get(gamesList.size()-1);
+		
 	}
-	
-	*/
-	
-	
 	
 	
 	@DeleteMapping("/players/{id}/games")

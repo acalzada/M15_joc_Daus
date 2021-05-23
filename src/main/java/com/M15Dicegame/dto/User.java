@@ -48,6 +48,21 @@ public class User {
 		this.meanScore = meanScore;
 	}
 	
+	public Game play() {
+		int min = 1;
+		int max = 6;
+		
+		int dice1 = (int) Math.floor(Math.random()*(max-min+1)+min);
+		int dice2 = (int) Math.floor(Math.random()*(max-min+1)+min);
+		Game game = new Game(this, dice1, dice2);
+		this.games.add(game);
+		float numberOfGames = this.games.size();
+		float gameResult = game.isGame_won() ? 1.0f : 0.0f;
+		float newMeanScore = this.getMeanScore()*((numberOfGames-1)/numberOfGames) + (gameResult/numberOfGames*100);
+		this.setMeanScore(newMeanScore);
+		return game;
+	}
+	
 	// Getters & Setters
 	
 

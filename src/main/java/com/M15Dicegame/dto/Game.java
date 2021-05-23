@@ -12,6 +12,9 @@ public class Game {
 	@Column(name="game_id")
 	private Long id;
 	
+	@Column(name="user_id")
+	private Long user_id;
+	
 	@Column(nullable=false)
 	private int dice1_Value;
 	
@@ -34,7 +37,8 @@ public class Game {
 		
 	}
 	
-	public Game(int dice1_val, int dice2_val) {
+	public Game(User user, int dice1_val, int dice2_val) {
+		this.user_id = user.getId();
 		this.dice1_Value = dice1_val;
 		this.dice2_Value = dice2_val;
 		
