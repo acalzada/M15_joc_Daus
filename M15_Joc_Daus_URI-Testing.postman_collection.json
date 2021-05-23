@@ -6,6 +6,104 @@
 	},
 	"item": [
 		{
+			"name": "DELETE USER GAMES",
+			"item": [
+				{
+					"name": "localhost:8181/players/3/games -  GET USER {id=3} GAMES",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8181/players/3/games",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"players",
+								"3",
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8181/players/3/games -  DELETE USER's GAMES",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8181/players/3/games",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"players",
+								"3",
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8181/players/3/games -  GET USER {id=3} GAMES Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8181/players/3/games",
+							"host": [
+								"localhost"
+							],
+							"port": "8181",
+							"path": [
+								"players",
+								"3",
+								"games"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "localhost:8181/players -  USERs LIST with MEANSCOREs",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
