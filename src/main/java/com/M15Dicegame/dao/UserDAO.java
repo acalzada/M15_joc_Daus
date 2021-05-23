@@ -9,9 +9,14 @@ import com.M15Dicegame.dto.User;
 
 public interface UserDAO extends JpaRepository<User, Long> {
 	
-	//@Query(value = "SELECT meanScore FROM User WHERE meanScore = (SELECT min(meanScore) FROM User)")
+	@Query(value = "SELECT avg(meanScore) FROM User")
+	public float getAverageMeanScore();
+	
 	@Query(value = "SELECT min(meanScore) FROM User")
 	public float getMinMeanScore();
+	
+	@Query(value = "SELECT max(meanScore) FROM User")
+	public float getMaxMeanScore();
 	
 	public List<User> findByMeanScore(float meanScore);
 

@@ -56,14 +56,14 @@ public class DiceGameController {
 		return user.getGames();
 	}
 	
-	
+		*/
 	
 	@GetMapping("/players/ranking")
 	public float getAverageGameWinningStatistic() {
-		return ;
+		return userServiceImpl.getAverageWinningScore();
 	}
 	
-	*/
+
 	
 	@GetMapping("/players/ranking/loser")
 	public List<User> getUserWithLowestScore() {
@@ -76,11 +76,10 @@ public class DiceGameController {
 	}
 	
 	
-	/*
+	
 	@GetMapping("/players/ranking/winner")
-	public User getUserWithHighestScore() {
-		return ;
+	public List<User> getUserWithHighestScore() {
+		return userServiceImpl.getFirstRanking();
 	}
 	
-	*/
 }

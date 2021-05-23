@@ -27,8 +27,17 @@ public class UserServiceImpl {
 		return userDAO.findByMeanScore(min_mean_score);
 	}
 	
+	public List<User> getFirstRanking() {
+		float max_mean_score = userDAO.getMaxMeanScore();
+		return userDAO.findByMeanScore(max_mean_score);
+	}
+	
 	public List<User> getPlayers() {
 		return userDAO.findAll();
+	}
+	
+	public float getAverageWinningScore() {
+		return userDAO.getAverageMeanScore();
 	}
 	
 }
