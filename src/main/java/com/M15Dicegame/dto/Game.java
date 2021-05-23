@@ -24,6 +24,10 @@ public class Game {
 	@Transient
 	int winningGameValue = 7;  // Value to get adding the two dices in order to win the game.
 	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@Transient
+	private User user;
+	
 	// Constructors
 	
 	protected Game() {

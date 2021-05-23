@@ -27,7 +27,7 @@ public class User {
 	private float meanScore;
 	
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval=true)
-	@JoinColumn(name="user_id")
+	@JoinColumn(name="user_id", updatable = false)
 	private List <Game> games;
 	
 	
@@ -103,6 +103,7 @@ public class User {
 	 */
 	public void deleteAllGames() {
 		this.games.clear();
+		this.meanScore = 0;
 	}
 
 

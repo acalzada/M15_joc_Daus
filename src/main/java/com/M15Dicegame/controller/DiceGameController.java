@@ -40,20 +40,24 @@ public class DiceGameController {
 		return;
 	}
 	
+	*/
+	
+	
+	
 	@DeleteMapping("/players/{id}/games")
-	public User deleteAllUserGames(@PathVariable(name="id") Long id, @RequestBody User user) {
-		return;
+	public User deleteAllUserGames(@PathVariable(name="id") Long id) {
+		User user = userServiceImpl.findById(id);
+		user.deleteAllGames();
+		userServiceImpl.updateUser(user);
+		return user;
 	}
 	
-	*/
 	
 	
 	@GetMapping("/players/")
 	public List<User> getAllUsersWithGameStatistics() {
 		return userServiceImpl.getAllUsers();
 	}
-	
-	
 	
 	
 	@GetMapping("/players/{id}/games")

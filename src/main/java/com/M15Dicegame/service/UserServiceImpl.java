@@ -17,6 +17,10 @@ public class UserServiceImpl {
 	@Autowired
 	GameDAO gameDAO;
 	
+	public void updateUser(User user) {
+		userDAO.save(user);
+	}
+	
 	public List<User> getAllUsers() {
 		return userDAO.getAllUsersIdAndNameAndMeanScore();
 	}
