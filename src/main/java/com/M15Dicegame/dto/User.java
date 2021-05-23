@@ -41,10 +41,19 @@ public class User {
 		this.name = name;
 	}
 
+	public User(Long id, String name, float meanScore) {
+		this.id = id;
+		this.name = name;
+		this.meanScore = meanScore;
+	}
 	
 	// Getters & Setters
 	
 
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	/**
 	 * Get the User's unique Id
 	 * @return the User's id
