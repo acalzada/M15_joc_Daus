@@ -131,6 +131,36 @@
 			"response": []
 		},
 		{
+			"name": "localhost:8181/players/8/games/ -  USER PLAYS NEW GAME",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/players/8/games/",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"players",
+						"8",
+						"games",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "localhost:8181/players -  UPDATE USER NAME",
 			"request": {
 				"method": "PUT",
