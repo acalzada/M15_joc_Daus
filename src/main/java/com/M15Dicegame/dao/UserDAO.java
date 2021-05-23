@@ -9,6 +9,9 @@ import com.M15Dicegame.dto.User;
 
 public interface UserDAO extends JpaRepository<User, Long> {
 	
+	@Query(value = "SELECT new User(id, name, meanScore) FROM User")
+	public List<User> getAllUsersIdAndNameAndMeanScore();
+	
 	@Query(value = "SELECT avg(meanScore) FROM User")
 	public float getAverageMeanScore();
 	

@@ -45,12 +45,15 @@ public class DiceGameController {
 		return;
 	}
 	
+	*/
+	
+	
 	@GetMapping("/players/")
 	public List<User> getAllUsersWithGameStatistics() {
-		return ;
+		return userServiceImpl.getAllUsers();
 	}
 	
-	*/
+	
 	
 	
 	@GetMapping("/players/{id}/games")

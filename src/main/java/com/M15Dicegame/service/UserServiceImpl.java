@@ -17,6 +17,9 @@ public class UserServiceImpl {
 	@Autowired
 	GameDAO gameDAO;
 	
+	public List<User> getAllUsers() {
+		return userDAO.getAllUsersIdAndNameAndMeanScore();
+	}
 	
 	public User findById(Long id) {
 		return userDAO.findById(id).get();
