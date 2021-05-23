@@ -22,8 +22,8 @@ public class UserServiceImpl {
 	}
 	
 	
-	public void updateUser(User user) {
-		userDAO.save(user);
+	public User updateUser(User user) {
+		return userDAO.save(user);
 	}
 	
 	public List<User> getAllUsers() {
