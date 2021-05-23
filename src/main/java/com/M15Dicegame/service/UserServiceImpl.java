@@ -17,6 +17,11 @@ public class UserServiceImpl {
 	@Autowired
 	GameDAO gameDAO;
 	
+	public User addNewUser(User user) {
+		return userDAO.save(user);
+	}
+	
+	
 	public void updateUser(User user) {
 		userDAO.save(user);
 	}

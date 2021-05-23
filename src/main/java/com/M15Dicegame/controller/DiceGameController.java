@@ -24,23 +24,32 @@ public class DiceGameController {
 	@Autowired
 	UserServiceImpl userServiceImpl;
 	
-	/*
+	
 	@PostMapping("/players")
 	public User createNewUser(@RequestBody User user) {
-		return;
+		return userServiceImpl.addNewUser(user);
 	}	
 	
+	/*
+	 
 	@PutMapping("/players")
 	public User changeUserName(@RequestBody String userName) {
 		return;
 	}
 	
+	*/
+	
+	/*
+	
 	@PostMapping("/players/{id}/games/")
-	public User throwDices(@PathVariable(name="id") Long id, @RequestBody User user) {
+	public User throwDices(@PathVariable(name="id") Long id) {
+		User user = userServiceImpl.findById(id);
+		user.play();
 		return;
 	}
 	
 	*/
+	
 	
 	
 	

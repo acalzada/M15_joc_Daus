@@ -21,6 +21,7 @@ public class User {
 	private String name;
 	
 	@Column(nullable=false)
+	@Transient
 	private LocalDateTime registration_date;
 	
 	@Column(name="meanScore", nullable=false, unique=false)
