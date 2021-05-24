@@ -44,3 +44,7 @@ target/
 
 # Ignore mysqlWorkbench model temporary files
 *.mwb.*
+
+# Ignore tasques.pdf file used to followup the tasks completed.
+tasques.pdf
+*tasques.pdf
